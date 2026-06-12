@@ -75,6 +75,8 @@ Format ở định dạng **Markdown** như sau:
 
 Nếu đáp án có chứa code, code phải cực kì ngắn gọn, hoặc chỉ là pseudo code, và **TUYỆT ĐỐI** không được phép xuống dòng.
 
+Mã mẫu (code ví dụ) sử dụng trong nội dung câu hỏi (Question description) phải được viết trong khối code block (fenced code block) riêng biệt, có định dạng thụt lề (indentation) rõ ràng, chuẩn chỉnh và xuống dòng đúng quy chuẩn lập trình để sinh viên dễ đọc hiểu. Quy tắc không xuống dòng chỉ áp dụng cho mã nguồn nằm bên trong các đáp án lựa chọn [A], [B], [C], [D].
+
 Đáp án của các câu phải có sự ngẫu nhiên khách quan, không được phép để quá nhiều câu liên tiếp cùng chung 1 đáp án (ví dụ, 5 câu liên tiếp chung đáp án C là không được).
 
 Bạn sẽ **cố gắng tối đa (nhưng không ép buộc)** để các đáp án có **độ dài tương đối bằng nhau**, nhằm tránh việc sinh viên dễ đoán đáp án đúng dựa trên độ dài.
@@ -156,6 +158,8 @@ Phân tích sơ bộ = 9
 Bạn sẽ **cố gắng tối đa (nhưng không ép buộc)** để các đáp án có **độ dài tương đối bằng nhau**, nhằm tránh việc sinh viên dễ đoán đáp án đúng dựa trên độ dài.
 
 Nếu đáp án có chứa code, code phải cực kì ngắn gọn, hoặc chỉ là pseudo code, và **TUYỆT ĐỐI** không được phép xuống dòng.
+
+Mã mẫu (code ví dụ) sử dụng trong nội dung câu hỏi (Question description) phải được viết trong khối code block (fenced code block) riêng biệt, có định dạng thụt lề (indentation) rõ ràng, chuẩn chỉnh và xuống dòng đúng quy chuẩn lập trình để sinh viên dễ đọc hiểu. Quy tắc không xuống dòng chỉ áp dụng cho mã nguồn nằm bên trong các đáp án lựa chọn [A], [B], [C], [D].
 
 Đáp án của các câu phải có sự ngẫu nhiên khách quan, không được phép để quá nhiều câu liên tiếp cùng chung 1 đáp án (ví dụ, 5 câu liên tiếp chung đáp án C là không được).
 
