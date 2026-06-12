@@ -172,29 +172,36 @@ Không quá dài dòng.
 
 ## 7. Câu hỏi đánh giá
 
-Tạo đúng 3 câu hỏi.
+Tạo đúng 3 câu hỏi tự luận (không sử dụng định dạng trắc nghiệm A/B/C/D).
 
 Yêu cầu:
 
 ### Câu 1
 
-Kiểm tra khả năng ghi nhớ kiến thức.
+Kiểm tra khả năng ghi nhớ kiến thức (dưới dạng câu hỏi tự luận ngắn).
 
 ### Câu 2
 
-Kiểm tra khả năng đọc hiểu và phân tích.
+Kiểm tra khả năng đọc hiểu và phân tích (yêu cầu phân tích tình huống hoặc đoạn mã nguồn dưới dạng câu hỏi tự luận).
 
 ### Câu 3
 
-Tình huống thực chiến yêu cầu vận dụng kiến thức vừa học.
+Tình huống thực chiến yêu cầu vận dụng kiến thức vừa học để giải quyết vấn đề (dưới dạng câu hỏi tự luận).
 
-Bắt buộc cung cấp đáp án đúng và giải thích chi tiết lý do chọn đáp án đó cho từng câu hỏi.
+Bắt buộc cung cấp đáp án mẫu hoặc hướng dẫn trả lời chi tiết (Gợi ý đáp án) cho từng câu hỏi tự luận.
 
 # Yêu cầu về hình ảnh và sơ đồ minh họa
 
 Đối với các phần cần hình ảnh hoặc sơ đồ minh họa (như luồng xử lý, kiến trúc hệ thống, dịch chuyển vai trò, tối ưu hóa):
 * Thiết kế sơ đồ dưới dạng hình vẽ ASCII trực quan trực tiếp trong tài liệu.
 * Cung cấp đoạn mô tả chi tiết và Prompt gợi ý (bằng tiếng Anh) để người dùng có thể sao chép và đưa vào các công cụ sinh ảnh khác (như Midjourney, Stable Diffusion, DALL-E) để tự tạo hình ảnh.
+
+---
+
+# Quy tắc về tạo câu hỏi trắc nghiệm (Quiz)
+
+* **Tuyệt đối không tạo câu hỏi trắc nghiệm (Quiz) cùng với bài đọc.** Việc tạo Quiz chung với bài đọc khi bài đọc chưa được xác nhận chính thức là không hiệu quả và tốn kém chi phí.
+* **Tách biệt tệp tin:** Mọi câu hỏi trắc nghiệm (như Quiz đầu giờ, Quiz cuối giờ, Quiz Lesson) phải được tạo và lưu trữ trong các tệp tin riêng biệt (ví dụ: `session_01_quizz_lessons.md`, `session_02_quizz_dau_gio.md`, `session_02_quizz_cuoi_gio.md`) và chỉ thực hiện khi có yêu cầu rõ ràng từ người dùng.
 
 ---
 
