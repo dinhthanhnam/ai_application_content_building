@@ -94,7 +94,7 @@ Bạn sẽ tuân thủ các nguyên tắc thiết kế sau
 
 ## **QUY TRÌNH SOẠN QUIZZ ĐẦU GIỜ (KIỂM TRA KIẾN THỨC CŨ, VÀ CHUẨN BỊ KIẾN THỨC MỚI)**
 
-* **Số lượng:** 15 câu.
+* **Số lượng:** 30 câu.
 * **Phân bổ:**
     * **10 câu bài cũ (Trọng tâm Vận dụng/Phân tích/Sáng tạo):** Kiểm tra kỹ năng fix bug, tối ưu hiệu năng và phản xạ lập trình.
     * **5 câu bài mới (Trọng tâm Nhận diện/Thông hiểu):** Kiểm tra việc tự học lý thuyết cơ bản qua E-learning.
@@ -102,12 +102,12 @@ Bạn sẽ tuân thủ các nguyên tắc thiết kế sau
 * **Ma trận câu hỏi:**
 | STT | Phạm vi | Mức độ | Số lượng | Mục tiêu cụ thể |
 |-----|--------|--------|---------|----------------|
-| Câu 1-4 | Bài cũ | Vận dụng chuyên sâu | 4 câu | Hiện thực hóa cú pháp vào bài toán thực tế nhỏ. |
-| Câu 5-7 | Bài cũ | Phân tích chuyên sâu | 3 câu | Đọc hiểu luồng dữ liệu và phát hiện lỗi logic (Debug). |
-| Câu 8-10 | Bài cũ | Sáng tạo | 3 câu | Tư duy kiến trúc, tối ưu hiệu năng và giải quyết vấn đề hệ thống. |
-| Câu 11-12 | Bài mới | Thông hiểu | 2 câu | Xác nhận tiếp thu khái niệm, thuật ngữ và mục đích công nghệ mới. |
-| Câu 13-14 | Bài mới | Vận dụng sơ bộ | 2 câu | Nhận diện cú pháp chuẩn và cách triển khai cơ bản. |
-| Câu 15 | Bài mới | Phân tích sơ bộ | 1 câu | So sánh công nghệ mới với giải pháp đã biết. |
+| Câu 1-8 | Bài cũ | Vận dụng chuyên sâu | 8 câu | Hiện thực hóa cú pháp vào bài toán thực tế nhỏ. |
+| Câu 9-14 | Bài cũ | Phân tích chuyên sâu | 6 câu | Đọc hiểu luồng dữ liệu và phát hiện lỗi logic (Debug). |
+| Câu 15-20 | Bài cũ | Sáng tạo | 6 câu | Tư duy kiến trúc, tối ưu hiệu năng và giải quyết vấn đề hệ thống. |
+| Câu 21-24 | Bài mới | Thông hiểu | 4 câu | Xác nhận tiếp thu khái niệm, thuật ngữ và mục đích công nghệ mới. |
+| Câu 25-28 | Bài mới | Vận dụng sơ bộ | 4 câu | Nhận diện cú pháp chuẩn và cách triển khai cơ bản. |
+| Câu 29-30 | Bài mới | Phân tích sơ bộ | 2 câu | So sánh công nghệ mới với giải pháp đã biết. |
 
 Quy đổi mức độ khó:
 Vận dụng chuyên sâu = 4
@@ -176,7 +176,7 @@ Bạn sẽ tuân thủ các nguyên tắc thiết kế sau
 
 ## **QUY TRÌNH SOẠN QUIZZ CUỐI GIỜ (KIỂM TRA LẠI KIẾN THỨC VỪA HỌC)**
 
-* **Số lượng:** 15 câu.
+* **Số lượng:** 30 câu.
 * **Cấu trúc:**
     * **6 câu Vận dụng:** Triển khai đúng cú pháp/chức năng công nghệ mới.
     * **5 câu Phân tích:** Đọc luồng code, bắt lỗi logic.
@@ -185,9 +185,9 @@ Bạn sẽ tuân thủ các nguyên tắc thiết kế sau
 * **Ma trận câu hỏi:**
 | STT | Mức độ | Số lượng | Mục tiêu đánh giá |
 |-----|--------|---------|------------------|
-| Câu 1-6 | Vận dụng | 6 câu | Kiểm tra khả năng triển khai đúng cú pháp và chức năng cơ bản của công nghệ mới. |
-| Câu 7-11 | Phân tích | 5 câu | Kiểm tra khả năng "đọc" luồng code, bắt lỗi logic và hiểu bản chất cơ chế vận hành. |
-| Câu 12-15 | Sáng tạo | 4 câu | Đánh giá tư duy lựa chọn giải pháp tốt nhất (Best Practice) cho bài toán thực tế. |
+| Câu 1-12 | Vận dụng | 12 câu | Kiểm tra khả năng triển khai đúng cú pháp và chức năng cơ bản của công nghệ mới. |
+| Câu 13-22 | Phân tích | 10 câu | Kiểm tra khả năng "đọc" luồng code, bắt lỗi logic và hiểu bản chất cơ chế vận hành. |
+| Câu 23-30 | Sáng tạo | 8 câu | Đánh giá tư duy lựa chọn giải pháp tốt nhất (Best Practice) cho bài toán thực tế. |
 
 Quy đổi mức độ khó:
 Vận dụng = 10
