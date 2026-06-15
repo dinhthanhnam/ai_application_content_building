@@ -39,7 +39,20 @@ Các bài tập này nhằm củng cố trực tiếp kiến thức cốt lõi c
 
 ---
 
-## III. Giới Hạn Phạm Vi Kiến Thức Theo Session
+## III. Bài Tập Tự Thực Hành Có Hướng Dẫn (Tutorial Homework)
+
+Mỗi session (ngoại trừ Session 1 và các session thực hành thực tế 4, 6, 8, 12) sẽ đi kèm một tài liệu hướng dẫn tự thực hành độc lập, đặt tên là `session_xx_tutorial_homework.md`.
+
+*   **Mục tiêu:** Giúp sinh viên củng cố kiến thức lý thuyết ngay sau khi học xong lesson bằng cách tự thực hành tương tác từng bước (step-by-step) với AI.
+*   **Tính chất:** Đây là bài tập **Tự học / Tự thực hành**, hoàn toàn không yêu cầu sinh viên phải nộp bài, không có hướng dẫn nộp bài hay kiểm tra, và không có tiêu chí chấm điểm.
+*   **Thời lượng ước tính:** Khoảng 30 phút.
+*   **Cấu trúc nội dung:**
+    1.  **Mục tiêu & Chuẩn bị:** Nêu rõ các kỹ năng sẽ đạt được sau bài thực hành và các công cụ cần mở sẵn (AI, IDE...).
+    2.  **Kịch bản & Hướng dẫn từng bước:** Dẫn dắt sinh viên thực hiện từng bước (sử dụng code mẫu, viết prompt thô, gửi AI, quan sát và phân tích hành vi ảo tưởng hoặc kết quả chưa tối ưu của AI, sau đó viết prompt nâng cấp có cấu trúc, chat điều chỉnh lặp để tối ưu kết quả).
+
+---
+
+## IV. Giới Hạn Phạm Vi Kiến Thức Theo Session
 
 Để tránh làm sinh viên bị ngợp và đảm bảo tính sư phạm:
 *   **Nguyên tắc:** Mức độ khó và kiến thức yêu cầu trong các bài tập phải nằm hoàn toàn trong phạm vi của Session đó hoặc các Session trước đó.
@@ -48,7 +61,7 @@ Các bài tập này nhằm củng cố trực tiếp kiến thức cốt lõi c
 
 ---
 
-## IV. Quy Định Nhúng Mã Nguồn Java
+## V. Quy Định Nhúng Mã Nguồn Java
 
 Môn học này tập trung vào tư duy làm việc với AI và kỹ thuật prompting, không phải môn học thuần code. Tuy nhiên, sinh viên đã có nền tảng Java từ trước:
 *   **Mục đích sử dụng Java:** Chỉ sử dụng Java làm ngữ cảnh nghiệp vụ, mã nguồn mẫu cần tối ưu, hoặc hiện trường chứa lỗi để sinh viên viết prompt tương tác.
@@ -59,7 +72,7 @@ Môn học này tập trung vào tư duy làm việc với AI và kỹ thuật p
 
 ---
 
-## V. Tiêu Chí Chấm Điểm Chi Tiết Cho AI (Strict Rubric for AI Grader)
+## VI. Tiêu Chí Chấm Điểm Chi Tiết Cho AI (Strict Rubric for AI Grader)
 
 Bộ tiêu chí này được thiết kế theo dạng quy tắc nghiêm ngặt để AI chấm bài có thể đánh giá bài làm của sinh viên một cách khách quan và nhất quán:
 
@@ -84,7 +97,7 @@ Bộ tiêu chí này được thiết kế theo dạng quy tắc nghiêm ngặt 
 
 ---
 
-## VI. Hướng Dẫn Nộp Bài Dành Cho Sinh Viên
+## VII. Hướng Dẫn Nộp Bài Dành Cho Sinh Viên
 
 Sinh viên cần tuân thủ cấu trúc nộp bài dưới đây để hệ thống AI chấm bài tự động có thể quét và ghi nhận kết quả:
 
