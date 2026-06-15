@@ -4,7 +4,7 @@
 ### Hướng dẫn làm bài:
 *   Sinh viên đọc kỹ yêu cầu và thực hiện làm bài tập trực tiếp trên một file Markdown duy nhất.
 *   Tuân thủ nghiêm ngặt **Hướng dẫn nộp bài** ở cuối tài liệu (chỉ nộp file văn bản `.md`, tuyệt đối không chụp ảnh màn hình).
-*   Các bài tập chạy thử với AI bắt buộc phải cung cấp **Link chia sẻ cuộc hội thoại (Share Link)** hoặc sao chép đầy đủ nội dung cuộc trò chuyện dạng text block.
+*   Các bài tập chạy thử với AI bắt buộc phải sao chép đầy đủ nội dung cuộc trò chuyện dạng text block trực tiếp vào file làm bài. Tuyệt đối không chấp nhận nộp link chia sẻ cuộc hội thoại.
 
 ---
 
@@ -134,5 +134,5 @@
 2.  **Cú pháp đặt tên file:** `SS01_[Họ_và_Tên]_[Mã_Sinh_Viên].md`
     *Ví dụ:* `SS01_NguyenVanA_HE150123.md`
 3.  **Yêu cầu bắt buộc về minh chứng:**
-    *   Tất cả các phần chạy thử nghiệm với AI (Bài 2, Bài 3, Bài 5) bắt buộc phải cung cấp **Link chia sẻ cuộc hội thoại (Share Link)** hoặc sao chép đầy đủ nội dung prompt và phản hồi của AI vào khối mã Markdown (code block).
-    *   **Tuyệt đối không sử dụng hình ảnh chụp màn hình (screenshot).** Bài nộp chứa hình ảnh thay thế văn bản hội thoại sẽ bị AI chấm bài từ chối ghi nhận điểm phần thực nghiệm.
+    *   Tất cả các phần chạy thử nghiệm với AI (Bài 2, Bài 3, Bài 5) bắt buộc phải sao chép đầy đủ nội dung prompt và phản hồi của AI vào khối mã Markdown (code block). Tuyệt đối không chấp nhận nộp link chia sẻ cuộc hội thoại (Share Link).
+    *   **Tuyệt đối không sử dụng hình ảnh chụp màn hình (screenshot).** Bài nộp chứa hình ảnh hoặc link chia sẻ thay thế văn bản hội thoại sẽ bị AI chấm bài từ chối ghi nhận điểm phần thực nghiệm để đảm bảo tính trung thực học thuật.
