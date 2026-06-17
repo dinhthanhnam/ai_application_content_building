@@ -52,26 +52,26 @@
 
 ### BÀI 3: Thực hành Refactor & Nâng cấp Giao dịch (Refinement Process - Robustness & Logging) (100 điểm)
 *   **Bối cảnh:** Sau khi tính tiền, hệ thống thực hiện lưu đơn hàng, trừ số lượng sản phẩm trong kho (Inventory) và tiến hành gọi cổng thanh toán (Payment Gateway). Đoạn code Java hiện tại do một lập trình viên tập sự viết đang chứa các lỗi nghiêm trọng về an toàn dữ liệu và bảo trì:
-    ```java
-    public class OrderPlacementService {
-        private InventoryRepository inventoryRepository;
-        private PaymentGateway paymentGateway;
-        private OrderRepository orderRepository;
+```java
+public class OrderPlacementService {
+    private InventoryRepository inventoryRepository;
+    private PaymentGateway paymentGateway;
+    private OrderRepository orderRepository;
 
-        public void placeOrder(Order order) {
-            // Trừ kho
-            for (OrderItem item : order.getItems()) {
-                Product product = inventoryRepository.findById(item.getProductId()).orElse(null);
-                product.setStock(product.getStock() - item.getQuantity());
-                inventoryRepository.save(product);
-            }
-            // Thanh toán qua Gateway
-            paymentGateway.charge(order.getCustomerId(), order.getTotalAmount());
-            // Lưu đơn hàng
-            orderRepository.save(order);
+    public void placeOrder(Order order) {
+        // Trừ kho
+        for (OrderItem item : order.getItems()) {
+            Product product = inventoryRepository.findById(item.getProductId()).orElse(null);
+            product.setStock(product.getStock() - item.getQuantity());
+            inventoryRepository.save(product);
         }
+        // Thanh toán qua Gateway
+        paymentGateway.charge(order.getCustomerId(), order.getTotalAmount());
+        // Lưu đơn hàng
+        orderRepository.save(order);
     }
-    ```
+}
+```
 *   **Nhiệm vụ:** Thiết kế chuỗi **Prompt Cải tiến đầu ra nâng cao (Refinement Chain) gồm 3 vòng** để yêu cầu AI refactor đoạn code trên thành mã nguồn chuẩn doanh nghiệp (Production-ready):
     *   **Vòng 1 (Robustness):** Yêu cầu kiểm tra các lỗi dữ liệu đầu vào (null, empty), kiểm tra số lượng tồn kho (nếu sản phẩm hết hàng hoặc số lượng mua vượt quá số lượng tồn kho thì ném ngoại lệ `OutOfStockException`), và bắt các lỗi phát sinh từ cổng thanh toán (nếu thanh toán thất bại thì ném ngoại lệ `PaymentFailedException`).
     *   **Vòng 2 (Maintainability & Clean Code):** Yêu cầu đưa vào quản lý giao dịch `@Transactional` (Spring Boot) để đảm bảo tính ACID (đặc biệt là tính nguyên tử - Atomicity - nếu thanh toán lỗi thì số lượng tồn kho phải được rollback hoàn trả lại). Tích hợp thư viện `Lombok` và `@Slf4j` để ghi log các bước xử lý đơn hàng chi tiết ở cấp độ INFO và ERROR.
