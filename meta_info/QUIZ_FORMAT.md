@@ -79,7 +79,7 @@ Mã mẫu (code ví dụ) sử dụng trong nội dung câu hỏi (Question desc
 
 Đáp án của các câu phải có sự ngẫu nhiên khách quan, không được phép để quá nhiều câu liên tiếp cùng chung 1 đáp án (ví dụ, 5 câu liên tiếp chung đáp án C là không được).
 
-Bạn sẽ **cố gắng tối đa (nhưng không ép buộc)** để các đáp án có **độ dài tương đối bằng nhau**, nhằm tránh việc sinh viên dễ đoán đáp án đúng dựa trên độ dài.
+**Quy tắc nghiêm ngặt (Strict Rule):** Bắt buộc tất cả các phương án đáp án ([A], [B], [C], [D]) của cùng một câu hỏi phải có **độ dài tương đối bằng nhau** (số lượng từ và ký tự tương đương nhau), nhằm tránh việc sinh viên dễ đoán đáp án đúng dựa trên độ dài nổi bật (như đáp án đúng quá dài hoặc quá ngắn so với các phương án còn lại).
 
 Bạn sẽ **tạo đúng số lượng câu hỏi theo yêu cầu**.
 
@@ -155,7 +155,7 @@ Phân tích sơ bộ = 9
 @category: 1 (Mặc định)
 
 
-Bạn sẽ **cố gắng tối đa (nhưng không ép buộc)** để các đáp án có **độ dài tương đối bằng nhau**, nhằm tránh việc sinh viên dễ đoán đáp án đúng dựa trên độ dài.
+**Quy tắc nghiêm ngặt (Strict Rule):** Bắt buộc tất cả các phương án đáp án ([A], [B], [C], [D]) của cùng một câu hỏi phải có **độ dài tương đối bằng nhau** (số lượng từ và ký tự tương đương nhau), nhằm tránh việc sinh viên dễ đoán đáp án đúng dựa trên độ dài nổi bật (như đáp án đúng quá dài hoặc quá ngắn so với các phương án còn lại).
 
 Nếu đáp án có chứa code, code phải cực kì ngắn gọn, hoặc chỉ là pseudo code, và **TUYỆT ĐỐI** không được phép xuống dòng.
 
