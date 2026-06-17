@@ -73,37 +73,37 @@ public class PaymentProcessor {
 ### BÀI 3: Đọc hiểu & Dò lỗi qua Prompt (Tái cấu trúc/Tối ưu mã nguồn cũ - Clean Code) (100 điểm)
 *   **Bối cảnh:** Bạn nhận bàn giao một lớp Java xuất báo cáo đơn hàng (`ReportGenerator`) từ một dự án cũ. Đoạn mã này vi phạm nghiêm trọng các tiêu chuẩn Clean Code: các vòng `if-else` và `for` lồng nhau sâu hoắm, hardcode đường dẫn, đặt tên biến kiểu viết tắt (`x`, `y`, `temp`), vi phạm SRP (Single Responsibility Principle) khi vừa đọc file, vừa tính toán tiền, vừa ghi file, và không có logging ghi vết.
 *   **Mã nguồn chưa tối ưu (Java):**
-    ```java
-    import java.io.*;
-    import java.util.*;
+```java
+import java.io.*;
+import java.util.*;
 
-    public class ReportGenerator {
-        public void gen(String f, String out) throws Exception {
-            BufferedReader r = new BufferedReader(new FileReader(f));
-            String l;
-            double t = 0;
-            List<String> list = new ArrayList<>();
-            while ((l = r.readLine()) != null) {
-                String[] p = l.split(",");
-                if (p[2].equals("COMPLETED")) {
-                    double amt = Double.parseDouble(p[1]);
-                    if (amt > 100) {
-                        t += amt;
-                        list.add(p[0]);
-                    }
+public class ReportGenerator {
+    public void gen(String f, String out) throws Exception {
+        BufferedReader r = new BufferedReader(new FileReader(f));
+        String l;
+        double t = 0;
+        List<String> list = new ArrayList<>();
+        while ((l = r.readLine()) != null) {
+            String[] p = l.split(",");
+            if (p[2].equals("COMPLETED")) {
+                double amt = Double.parseDouble(p[1]);
+                if (amt > 100) {
+                    t += amt;
+                    list.add(p[0]);
                 }
             }
-            r.close();
-            PrintWriter w = new PrintWriter(new FileWriter(out));
-            w.println("Total: " + t);
-            for (String id : list) {
-                w.println("Order ID: " + id);
-            }
-            w.close();
-            System.out.println("Done processing " + f);
         }
+        r.close();
+        PrintWriter w = new PrintWriter(new FileWriter(out));
+        w.println("Total: " + t);
+        for (String id : list) {
+            w.println("Order ID: " + id);
+        }
+        w.close();
+        System.out.println("Done processing " + f);
     }
-    ```
+}
+```
 *   **Đề bài:** Hãy thiết kế một chuỗi **Prompt Cải tiến đầu ra nâng cao (Refinement Chain) gồm 3 vòng** để yêu cầu AI refactor đoạn code trên thành mã nguồn chuẩn doanh nghiệp:
     *   **Vòng 1 (Robustness):** Bổ sung kiểm tra null, rỗng, xử lý ngoại lệ an toàn `IOException` và `NumberFormatException` (bỏ qua dòng lỗi mà không làm sập luồng).
     *   **Vòng 2 (Clean Code & SRP):** Tách lớp `ReportGenerator` thành các phương thức hoặc lớp riêng biệt đảm nhận các nhiệm vụ đơn nhất (Đọc file, Xử lý tính toán, Ghi file). Đổi tên biến rõ nghĩa theo quy ước CamelCase.
