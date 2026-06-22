@@ -201,7 +201,7 @@ Bắt buộc cung cấp đáp án mẫu hoặc hướng dẫn trả lời chi ti
 # Quy tắc về tạo câu hỏi trắc nghiệm (Quiz)
 
 * **Tuyệt đối không tạo câu hỏi trắc nghiệm (Quiz) cùng với bài đọc.** Việc tạo Quiz chung với bài đọc khi bài đọc chưa được xác nhận chính thức là không hiệu quả và tốn kém chi phí.
-* **Tách biệt tệp tin:** Mọi câu hỏi trắc nghiệm (như Quiz đầu giờ, Quiz cuối giờ, Quiz Lesson) phải được tạo và lưu trữ trong các tệp tin riêng biệt (ví dụ: `session_01_quizz_lessons.md`, `session_02_quizz_dau_gio.md`, `session_02_quizz_cuoi_gio.md`) và chỉ thực hiện khi có yêu cầu rõ ràng từ người dùng.
+* **Tách biệt tệp tin:** Mọi câu hỏi trắc nghiệm (như Quiz đầu giờ, Quiz cuối giờ, Quiz Lesson) phải được tạo và lưu trữ trong các tệp tin riêng biệt (ví dụ: `session_01_quizz_lessons.md`, `session_02_quizz_dau_gio.md`, `session_02_quizz_cuoi_gio.md`). Riêng Quiz Exam (tổng hợp kiến thức) sẽ được lưu trữ tại tệp `quizz_exam.md` ở thư mục root. Chỉ thực hiện khi có yêu cầu rõ ràng từ người dùng.
 
 ---
 

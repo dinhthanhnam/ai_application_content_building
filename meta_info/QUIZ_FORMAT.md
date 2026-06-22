@@ -201,3 +201,63 @@ Sáng tạo = 6
 **Tất cả các câu hỏi phải được viết bằng tiếng Việt.**
 
 *Quiz cuối giờ chỉ tập trung vào kiến thức của bài mới, nên cần tham khảo bài đọc tương ứng để tạo câu hỏi.*
+
+# QUIZ EXAM FORMAT
+
+## Q<number>
+
+<Nội dung câu hỏi>
+
+[A]
+<Nội dung đáp án A>
+[EXP]
+<Nội dung giải thích cho A>
+[B]
+<Nội dung đáp án B>
+[EXP]
+<Nội dung giải thích cho B>
+[C]
+<Nội dung đáp án C>
+[EXP]
+<Nội dung giải thích cho C>
+[D]
+<Nội dung đáp án D>
+[EXP]
+<Nội dung giải thích cho D>
+
+
+@correct: A [hoặc B, C, D]
+@difficulty: 1 [Hoặc 2, 3] (Đại diện cho mức độ khó của câu hỏi: 1 - Dễ, 2 - Trung bình, 3 - Khó)
+@point: 20 (default)
+
+
+**Quy tắc nghiêm ngặt (Strict Rule):** Bắt buộc tất cả các phương án đáp án ([A], [B], [C], [D]) của cùng một câu hỏi phải có **độ dài tương đối bằng nhau** (số lượng từ và ký tự tương đương nhau), nhằm tránh việc sinh viên dễ đoán đáp án đúng dựa trên độ dài nổi bật (như đáp án đúng quá dài hoặc quá ngắn so với các phương án còn lại).
+
+Nếu đáp án có chứa code, code phải cực kì ngắn gọn, hoặc chỉ là pseudo code, và **TUYỆT ĐỐI** không được phép xuống dòng.
+
+Mã mẫu (code ví dụ) sử dụng trong nội dung câu hỏi (Question description) phải được viết trong khối code block (fenced code block) riêng biệt, có định dạng thụt lề (indentation) rõ ràng, chuẩn chỉnh và xuống dòng đúng quy chuẩn lập trình để sinh viên dễ đọc hiểu. Quy tắc không xuống dòng chỉ áp dụng cho mã nguồn nằm bên trong các đáp án lựa chọn [A], [B], [C], [D].
+
+Đáp án của các câu phải có sự ngẫu nhiên khách quan, không được phép để quá nhiều câu liên tiếp cùng chung 1 đáp án (ví dụ, 5 câu liên tiếp chung đáp án C là không được).
+
+Bạn sẽ **tạo đúng số lượng câu hỏi theo yêu cầu**.
+
+Bạn sẽ tuân thủ các nguyên tắc thiết kế sau
+
+## **1. NGUYÊN TẮC CỐT LÕI (5 "KHÔNG" & "NÊN")**
+* **Đơn nhiệm:** Mỗi câu hỏi chỉ đánh giá **duy nhất 1** kiến thức/kỹ năng. Không lồng ghép nhiều lỗi (cú pháp, logic, hiệu năng) vào cùng một câu.
+* **Ngữ cảnh hóa:** Ưu tiên đưa vào **tình huống thực tế (Scenario)** thay vì hỏi định nghĩa suông.
+* **Nhiễu thông minh:** Các phương án sai phải dựa trên **lỗi phổ biến** (ví dụ: lỗi lặp thừa/thiếu 1 lần). Tuyệt đối không dùng đáp án ngớ ngẩn như "Cả 3 đều sai".
+* **Đồng nhất:** Các phương án phải tương đồng về độ dài, cấu trúc ngữ pháp và phạm vi kiến thức.
+* **Sắc bén (No clues):** Không để lộ từ khóa gợi ý giữa câu hỏi và đáp án.
+
+## **QUY TRÌNH SOẠN QUIZZ EXAM**
+
+* **Tên file & Vị trí:** Lưu trữ tập trung tại file `quizz_exam.md` đặt ở thư mục root của dự án.
+* **Số lượng & Phân bổ:** Tổng cộng 90 câu hỏi, chia đều cho các mức độ khó:
+    * 30 câu Dễ (`@difficulty: 1`)
+    * 30 câu Trung bình (`@difficulty: 2`)
+    * 30 câu Khó (`@difficulty: 3`)
+* **Phạm vi kiến thức:** Tổng hợp nội dung kiến thức từ các session lý thuyết từ 1 đến 8 (không chia nhỏ hay tách biệt theo từng session đơn lẻ).
+* **Tiêu chuẩn:** Sinh viên chỉ mất tối đa **44 giây/câu** để trả lời.
+
+**Tất cả các câu hỏi phải được viết bằng tiếng Việt.**
