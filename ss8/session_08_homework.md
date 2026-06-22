@@ -32,25 +32,25 @@
 ### BÀI 2: Thực hành Gỡ lỗi từ Stack Trace (100 điểm)
 *   **Bối cảnh:** Khi chạy thử nghiệm phương thức lưu giao dịch của SecureBank vào cơ sở dữ liệu quan hệ, hệ thống đột ngột bị sập và ném ra ngoại lệ `DataIntegrityViolationException` hiển thị trên màn hình Console.
 *   **Mã nguồn gây lỗi (Java):**
-    ```java
-    import java.sql.Connection;
-    import java.sql.PreparedStatement;
+```java
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
-    public class TransactionRepository {
-        private Connection connection;
+public class TransactionRepository {
+    private Connection connection;
 
-        public void saveTransaction(String transactionId, Long userId, double amount) throws Exception {
-            // Lỗi logic: Không kiểm tra xem userId có tồn tại trong bảng Users hay không
-            // Dẫn đến lỗi vi phạm khóa ngoại (Foreign Key Constraint Violation) dưới CSDL
-            String sql = "INSERT INTO transactions (id, user_id, amount) VALUES (?, ?, ?)";
-            PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setString(1, transactionId);
-            ps.setLong(2, userId);
-            ps.setDouble(3, amount);
-            ps.executeUpdate();
-        }
+    public void saveTransaction(String transactionId, Long userId, double amount) throws Exception {
+        // Lỗi logic: Không kiểm tra xem userId có tồn tại trong bảng Users hay không
+        // Dẫn đến lỗi vi phạm khóa ngoại (Foreign Key Constraint Violation) dưới CSDL
+        String sql = "INSERT INTO transactions (id, user_id, amount) VALUES (?, ?, ?)";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setString(1, transactionId);
+        ps.setLong(2, userId);
+        ps.setDouble(3, amount);
+        ps.executeUpdate();
     }
-    ```
+}
+```
 *   **Dấu vết lỗi xuất hiện ở Console (Stack Trace):**
     ```text
     org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: "CONSTRAINT_FOREIGN_KEY_USER: PUBLIC.TRANSACTIONS FOREIGN KEY(USER_ID) REFERENCES PUBLIC.USERS(ID) (99)"; SQL statement:
@@ -72,35 +72,35 @@
 ### BÀI 3: Thực hành Refactor Clean Code - Refinement Process (100 điểm)
 *   **Bối cảnh:** Lập trình viên cũ bàn giao lại một class `LedgerBalanceCalculator` làm nhiệm vụ tính tổng số dư tài khoản của một chi nhánh ngân hàng. Đoạn code dài hơn 80 dòng, sử dụng các biến viết tắt vô nghĩa, có quá nhiều câu lệnh `if-else` lồng nhau sâu và hoàn toàn không ghi log khi gặp lỗi số học.
 *   **Mã nguồn chưa tối ưu (Java):**
-    ```java
-    import java.util.List;
+```java
+import java.util.List;
 
-    public class LedgerBalanceCalculator {
-        public double calc(List<Account> list, String branch, boolean activeOnly) {
-            double total = 0;
-            if (list != null) {
-                for (Account a : list) {
-                    if (a != null) {
-                        if (a.getBranch().equals(branch)) {
-                            if (activeOnly) {
-                                if (a.getStatus().equals("ACTIVE")) {
-                                    if (a.getBalance() > 0) {
-                                        total += a.getBalance();
-                                    }
-                                }
-                            } else {
+public class LedgerBalanceCalculator {
+    public double calc(List<Account> list, String branch, boolean activeOnly) {
+        double total = 0;
+        if (list != null) {
+            for (Account a : list) {
+                if (a != null) {
+                    if (a.getBranch().equals(branch)) {
+                        if (activeOnly) {
+                            if (a.getStatus().equals("ACTIVE")) {
                                 if (a.getBalance() > 0) {
                                     total += a.getBalance();
                                 }
+                            }
+                        } else {
+                            if (a.getBalance() > 0) {
+                                total += a.getBalance();
                             }
                         }
                     }
                 }
             }
-            return total;
         }
+        return total;
     }
-    ```
+}
+```
 *   **Nhiệm vụ:** Thiết kế một chuỗi **Prompt Cải tiến đầu ra nâng cao (Refinement Chain) gồm 3 vòng** để yêu cầu AI refactor đoạn code trên thành mã nguồn đạt chuẩn doanh nghiệp (Production-ready):
     *   **Vòng 1 (Robustness & Clean Code):** Loại bỏ cấu trúc `if-else` lồng nhau sâu bằng kỹ thuật "Return Early" hoặc "Guard Clauses". Đổi tên biến rõ nghĩa theo đúng quy ước Clean Code.
     *   **Vòng 2 (Maintainability & OOP):** Tối ưu hóa thuật toán bằng cách sử dụng **Java 17 Stream API** để viết ngắn gọn, dễ đọc. Bổ sung chú thích `@Transactional(readOnly = true)` nếu class này hoạt động trong môi trường Spring Boot.
