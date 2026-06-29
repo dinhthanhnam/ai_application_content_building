@@ -1875,7 +1875,7 @@ Garbage Collector hoạt động tự động dưới sự quản lý của JVM,
 @difficulty: 3
 @point: 20
 
-## Q## Q76
+## Q76
 
 Bạn có một phương thức tính phí vận chuyển chứa hơn 20 nhánh điều kiện `if-else` lồng nhau phức tạp. Để refactor đoạn code này nhằm tuân thủ nguyên tắc Open-Closed Principle (OCP), Prompt nào sau đây gửi cho AI là hiệu quả nhất?
 
